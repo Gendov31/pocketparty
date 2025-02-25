@@ -1,0 +1,31 @@
+.nav-bar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: var(--text-light);
+    display: flex;
+    justify-content: space-around;
+    padding: 1rem;
+    box-shadow: 0 -4px 20px var(--shadow-color);
+    z-index: 1000;
+  }
+  
+  .nav-link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.25rem;
+    color: var(--text-dark);
+    transition: color 0.3s ease;
+  }
+  
+  .nav-link:hover,
+  .nav-link.active {
+    color: var(--primary-blue);
+  }
+  
+  .nav-link span {
+    font-size: 0.875rem;
+    font-weight: 500;
+  }

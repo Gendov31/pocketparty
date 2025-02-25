@@ -1,0 +1,133 @@
+.game-detail-page {
+    background: var(--primary-blue);
+    min-height: 100vh;
+    color: var(--text-light);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    overflow-y: auto;
+  }
+  
+  .game-detail-header {
+    padding: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  .back-button {
+    color: var(--text-light);
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+  
+  .video-container {
+    position: relative;
+    width: 100%;
+    background: black;
+  }
+  
+  .video-container img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  .video-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.3);
+    color: white;
+  }
+  
+  .play-button {
+    width: 80px;
+    height: 80px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+    cursor: pointer;
+  }
+  
+  .game-stats {
+    display: flex;
+    justify-content: space-around;
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.1);
+    margin: 1rem 0;
+  }
+  
+  .stat {
+    text-align: center;
+  }
+  
+  .stat-value {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: var(--primary-yellow);
+  }
+  
+  .stat-label {
+    font-size: 0.875rem;
+    opacity: 0.9;
+  }
+  
+  .game-description {
+    padding: 2rem;
+    line-height: 1.6;
+  }
+  
+  .play-game-button {
+    position: fixed;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--primary-yellow);
+    color: var(--text-dark);
+    padding: 1rem 2.5rem;
+    border-radius: 12px;
+    font-size: 1.125rem;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    width: 90%;
+    max-width: 400px;
+    transition: transform 0.3s ease;
+  }
+  
+  .play-game-button:hover {
+    transform: translateX(-50%) scale(1.02);
+  }
+  
+  @media (max-width: 768px) {
+    .game-detail-header {
+      padding: 1rem;
+    }
+  
+    .game-stats {
+      padding: 1.5rem;
+    }
+  
+    .game-description {
+      padding: 1.5rem;
+    }
+  
+    .play-button {
+      width: 60px;
+      height: 60px;
+    }
+  }

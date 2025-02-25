@@ -1,0 +1,20 @@
+.header {
+    background: var(--primary-blue);
+    color: var(--text-light);
+    padding: 2rem 1.5rem;
+    box-shadow: 0 4px 20px var(--shadow-color);
+    text-align: center;
+    margin: 0 -1rem;
+  }
+  
+  .header h1 {
+    font-size: 1.75rem;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+  }
+  
+  @media (max-width: 768px) {
+    .header h1 {
+      font-size: 1.5rem;
+    }
+  }
