@@ -16,10 +16,17 @@ body {
 }
 
 .app {
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 1rem;
+  display: block;
+  max-width: 600px;
+  margin: auto;
+  position: relative;
+  overflow: hidden;
+  height: 100vh;
+  padding: 1% 5% 80px; /* Bottom padding for navbar */
+  overflow-y: auto;
+  overflow-x: hidden;
+  box-sizing: border-box;
+  -webkit-overflow-scrolling: touch;
 }
 
 button {
@@ -38,9 +45,10 @@ a {
   color: inherit;
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-  .app {
-    padding: 0 0.5rem;
+@media (max-width: 600px) {
+  .nav-bar {
+    width: 100%;
+    left: 0;
+    transform: none;
   }
 }

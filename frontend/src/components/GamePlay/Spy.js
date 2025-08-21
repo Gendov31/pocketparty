@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react';
 import { useGame } from '../../context/GameContext';
-import './GamePlay.css';
+import './Spy.css';
 
-export function GamePlay({ onClose }) {
+export function Spy({ onClose }) {
   const { playerCount } = useGame();
   const [currentPlayer, setCurrentPlayer] = useState(1);
   const [selectedCards, setSelectedCards] = useState(new Set());

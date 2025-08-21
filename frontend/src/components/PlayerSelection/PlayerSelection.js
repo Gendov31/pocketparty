@@ -1,14 +1,20 @@
 import { useGame } from '../../context/GameContext';
+import { Spy } from '../GamePlay/Spy';
 import './PlayerSelection.css';
 
 export function PlayerSelection({ onClose }) {
-  const { selectedGame, setGameStarted, setPlayerCount } = useGame();
+  const { selectedGame, setSelectedGame, setGameStarted, gameStarted, setPlayerCount } = useGame();
   const minPlayers = parseInt(selectedGame.players);
   const maxPlayers = minPlayers + 5;
   const playerCounts = Array.from(
     { length: maxPlayers - minPlayers + 1 },
     (_, i) => minPlayers + i
   );
+  const handleClose = () => {
+    setSelectedGame(null);
+    setGameStarted(false);
+    setPlayerCount(null);
+  };
 
   const handleContinue = () => {
     const selectedCount = document.querySelector('.player-count.active')?.dataset.count;
@@ -17,6 +23,9 @@ export function PlayerSelection({ onClose }) {
       setGameStarted(true);
     }
   };
+  if (gameStarted) {
+    return <Spy onClose={handleClose} />;
+  }
 
   return (
     <div className="player-selection-page">
